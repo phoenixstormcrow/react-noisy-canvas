@@ -4,6 +4,12 @@ A react component which creates an html canvas animated with noise.
 
 This component creates a canvas and passes it to [noisify-canvas](https://github.com/phoenixstormcrow/noisify-canvas) to create animated noise. See the [demo](http://phoenixstormcrow.github.io/noisify-canvas/) for that package for an idea of what the animation looks like.
 
+## installation
+
+```
+npm install react-noisy-canvas
+```
+
 ## usage
 ```
 import NoisyCanvas from 'react-noisy-canvas';
