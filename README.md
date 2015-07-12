@@ -16,6 +16,8 @@ React.render(
 
 ## props
 
+All props are optional.
+
 - width: The width of the canvas. Defaults to 300.
 - height: The height of the canvas. Defaults to 150.
 - mode: Set mode to the string `'rgb'` to generate color noise. Defaults to `undefined`, which has the same behavior as `mode='grey'`. Greyscale noise is generated in the default case.
