@@ -5,7 +5,7 @@
   "main": "build/NoisyCanvas.js",
   "scripts": {
     "lint": "eslint src/**",
-    "build": "browserify -t babelify -d -o build/NoisyCanvas.js src/NoisyCanvas.js",
+    "build": "browserify -t babelify -o build/NoisyCanvas.js src/NoisyCanvas.js",
     "build-demo": "npm run build && browserify -t babelify -d -o demo/index.js src/demo/index.js",
     "run-demo": "serve -p 3000 . & opener http://localhost:3000/demo"
   },
