@@ -1,6 +1,6 @@
 {
   "name": "react-noisy-canvas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A react component which creates an html canvas animated with noise.",
   "main": "build/NoisyCanvas.js",
   "scripts": {
