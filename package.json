@@ -18,5 +18,19 @@
   "devDependencies": {
     "babelify": "^6.1.3",
     "browserify": "^10.2.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phoenixstormcrow/react-noisy-canvas.git"
+  },
+  "keywords": [
+    "react",
+    "html5",
+    "canvas",
+    "animation"
+  ],
+  "bugs": {
+    "url": "https://github.com/phoenixstormcrow/react-noisy-canvas/issues"
+  },
+  "homepage": "https://github.com/phoenixstormcrow/react-noisy-canvas"
 }
