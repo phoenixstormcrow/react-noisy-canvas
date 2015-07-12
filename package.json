@@ -5,8 +5,8 @@
   "main": "build/NoisyCanvas.js",
   "scripts": {
     "lint": "eslint src/**",
-    "build": "browserify -t babelify -o build/NoisyCanvas.js src/NoisyCanvas.js",
-    "build-demo": "npm run build && browserify -t babelify -d -o demo/index.js src/demo/index.js",
+    "build": "babel src/NoisyCanvas.js -o build/NoisyCanvas.js",
+    "build-demo": "browserify -t babelify -d -o demo/index.js src/demo/index.js",
     "run-demo": "serve -p 3000 . & opener http://localhost:3000/demo"
   },
   "author": "K. P. MacGregor <phoenixstormcrow@gmail.com>",
