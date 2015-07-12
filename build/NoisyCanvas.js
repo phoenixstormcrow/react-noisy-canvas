@@ -1,11 +1,12 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/* noise.js */
+/* noisifyCanvas.js */
 
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
+exports['default'] = noisify;
 function rand() {
   return Math.random() * 0xff & 0xff;
 }
@@ -47,29 +48,11 @@ function generate(ctx) {
   return imgData;
 }
 
-exports['default'] = generate;
-module.exports = exports['default'];
-},{"is-little-endian":3}],2:[function(require,module,exports){
-/* noisifyCanvas.js */
-
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = noisify;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _noise = require('./noise');
-
-var _noise2 = _interopRequireDefault(_noise);
-
 function noisify(canvas, opts) {
   var reqId = undefined;
 
   function step(ctx) {
-    ctx.putImageData((0, _noise2['default'])(ctx, opts), 0, 0);
+    ctx.putImageData(generate(ctx, opts), 0, 0);
     reqId = window.requestAnimationFrame(function () {
       return step(ctx);
     });
@@ -87,10 +70,11 @@ function noisify(canvas, opts) {
 }
 
 module.exports = exports['default'];
-},{"./noise":1}],3:[function(require,module,exports){
+
+},{"is-little-endian":2}],2:[function(require,module,exports){
 module.exports = ((new Uint32Array((new Uint8Array([1,2,3,4])).buffer))[0] === 0x04030201)
 
-},{}],4:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 /* NoisyCanvas.js
 
    react component wrapper for noisify-canvas
@@ -122,4 +106,4 @@ exports['default'] = React.createClass({
 });
 module.exports = exports['default'];
 
-},{"noisify-canvas":2}]},{},[4]);
+},{"noisify-canvas":1}]},{},[3]);
